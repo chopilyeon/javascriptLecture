@@ -43,21 +43,26 @@ console.log(tiger);
 tiger.sleep();
 tiger.eat();
 
+
+
 class Dog extends Animal {
   constructor(color, ownerName) {
-    super(color);
+    super(color); // 내가 상속하고 있는 부모 클래스임. // 부모클래스에 color를 전달해서 dog라는 class에만 owner name을 전달
     this.ownerName = ownerName;
   }
   play() {
     console.log('놀자아~!');
   }
 
-  // 오버라이딩 overriding
+  // 오버라이딩 overriding 덮어 씌우는 거임.
   eat() {
     super.eat();
     console.log('강아지가 먹는다!');
   }
 }
+
+
+
 const dog = new Dog('빨강이', '엘리');
 console.log(dog);
 dog.sleep();

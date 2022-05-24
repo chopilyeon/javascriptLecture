@@ -33,8 +33,8 @@ function fetchFruits(){
 }
 
 
-//call back 계속 하면 여전히 지저분함 
-// ㄴ
+//call back 계속면 여전히 지저분함 
+
 
 
 

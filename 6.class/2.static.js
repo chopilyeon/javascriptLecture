@@ -1,6 +1,7 @@
 // static 정적 프로퍼티, 메서드
 class Fruit {
   static MAX_FRUITS = 4;
+  
   // 생성자: new 키워드로 객체를 생성할때 호출되는 함수
   constructor(name, emoji) {
     this.name = name;
@@ -21,10 +22,14 @@ class Fruit {
 
 const banana = Fruit.makeRandomFruit();
 console.log(banana);
-console.log(Fruit.MAX_FRUITS);
+console.log(Fruit.MAX_FRUITS); 
+
 // apple은 Fruit 클래스의 인스턴스이다.
+
 const apple = new Fruit('apple', '🍎');
+
 // orange은 Fruit 클래스의 인스턴스이다.
+
 const orange = new Fruit('orange', '🍊');
 
 console.log(apple);
@@ -33,5 +38,7 @@ console.log(apple.name);
 console.log(apple.emoji);
 apple.display();
 
+
+//이런게 static 함수임 class 로 메소드 호출하는 것 
 Math.pow();
 Number.isFinite(1);

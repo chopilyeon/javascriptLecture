@@ -20,6 +20,7 @@ class FullTimeEmployee extends Employee {
   static PAY_RATE = 10000;
   constructor(name, department, hoursPerMonth) {
     super(name, department, hoursPerMonth, FullTimeEmployee.PAY_RATE);
+    //PAY_RATE에 일일이 10000원 8000원 쓰기가 굉장히 안좋은 습관임 -> 변경해주자. static으로 !!
   }
 }
 class PartTimeEmployee extends Employee {
@@ -28,8 +29,13 @@ class PartTimeEmployee extends Employee {
     super(name, department, hoursPerMonth, PartTimeEmployee.PAY_RATE);
   }
 }
-
+// FullTimeEmployee.PAY_RATE=500;
+// PartTimeEmployee.PAY_RATE=2200;
 const ellie = new FullTimeEmployee('엘리', 's/w', 30);
 const bob = new PartTimeEmployee('밥', 's/w', 20);
+console.log(ellie.calculatePay());
+console.log(bob.calculatePay());
+FullTimeEmployee.PAY_RATE=500;
+PartTimeEmployee.PAY_RATE=2200;
 console.log(ellie.calculatePay());
 console.log(bob.calculatePay());

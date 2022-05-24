@@ -4,19 +4,19 @@
 class Counter {
   #value;
   constructor(startValue) {
-    if (isNaN(startValue) || startValue < 0) {
-      this.#value = 0;
+    if (isNaN(startValue) || startValue < 0) { // 숫자가 아니거나 0보다 작다면
+      this.#value = 0; //class 내에서만 제어가 가능함. 
     } else {
-      this.#value = startValue;
+      this.#value = startValue; //외부에서 접근 못하게 private field로 만듬 
     }
   }
 
-  get value() {
-    return this.#value;
+  get value() { //접근 제어자
+    return this.#value; //#을 통해서 외부로부터 데이터를 다 제한함
   }
 
   increment = () => {
-    this.#value++;
+    this.#value++; //#으로 value를 증가시키는건 increment 함수뿐임. 
   };
 }
 const counter = new Counter(0);

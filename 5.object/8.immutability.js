@@ -9,15 +9,21 @@ function display(num) {
 const value = 4;
 display(value);
 console.log(value);
+//여기서는 값을 그냥 전달 받는 것임 
+// call by value
+
 
 function displayObj(obj) {
-  obj.name = 'Bob'; // ❌❌❌❌❌❌ 외부로 부터 주어진 인자(오브젝트)를 내부에서 변경 ❌
+  obj.name = 'Bob'; // ❌❌❌❌❌❌ 외부로 부터 주어진 인자(오브젝트)를 내부에서 변경 ❌ // 아주 나쁜짓임. 
   console.log(obj);
 }
 const ellie = { name: 'Ellie' };
+//동일한 주소를 가르키고 있음. 
+//call by reference
+
 displayObj(ellie);
 console.log(ellie);
 
 function changeName(obj) { // 이름부터 변경하는 느낌을 주도록!
-  return { ...obj, name: 'Bob' }; // 반환할때는 새로운 오브젝트 만들기!
+  return { ...obj, name: 'Bob' }; // 반환할때는 새로운 오브젝트 만들기! 이러면 이름만 바꿔줌. 
 }

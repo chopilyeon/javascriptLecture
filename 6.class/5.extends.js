@@ -56,7 +56,7 @@ class Dog extends Animal {
 
   // 오버라이딩 overriding 덮어 씌우는 거임.
   eat() {
-    super.eat();
+    super.eat(); //부모에 있는 함수 불러들일수도 있음 *super 
     console.log('강아지가 먹는다!');
   }
 }

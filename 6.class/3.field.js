@@ -3,8 +3,8 @@
 //자바 스크립트는 #
 class Fruit {
   #name;
-  #emoji;
-  #type = '과일'; //type ='과일' 이런식으로 인스턴스를 만들 때 먼저 초기화가 되어야 한다면 생성자 밖에다 써주도록 하자. 
+  #emoji; // #을 붙이면 class 내에서만 제어가 가능함
+  #type = '과일'; //type ='과일' 이런식으로 인스턴스를 만들 때 먼저 초기화가 되어야 한다면 생성자 밖에다 써주도록 하자.
   constructor(name, emoji) {
     this.#name = name;
     this.#emoji = emoji;

@@ -29,13 +29,13 @@ getBanana() //
 
   //원래 코드는 이랬는데 return을 생략했음. 
   //중첩된 코드는 콜백헬이 됨. 
-  getBanana() //
-  .then((banana) => // 인자값이 같지 않으므로 생략은 못했음 대신 return값은 생략함
-    getApple() //
-      .then((apple) => {
-       return [banana, apple]) // return이 생략 된 것임 
-      })
-  .then(console.log); // 4초 있다가 출력이 됨.  순차적으로 진행하니까 매우 번거로움. 
+  // getBanana() //
+  // .then((banana) => // 인자값이 같지 않으므로 생략은 못했음 대신 return값은 생략함
+  //   getApple() //
+  //     .then((apple) => {
+  //      return [banana, apple]) // return이 생략 된 것임 
+  //     })
+  // .then(console.log); // 4초 있다가 출력이 됨.  순차적으로 진행하니까 매우 번거로움. 
 
 
 

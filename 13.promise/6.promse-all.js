@@ -28,6 +28,7 @@ getBanana() //
 
 
   //원래 코드는 이랬는데 return을 생략했음. 
+  //중첩된 코드는 콜백헬이 됨. 
   getBanana() //
   .then((banana) => // 인자값이 같지 않으므로 생략은 못했음 대신 return값은 생략함
     getApple() //

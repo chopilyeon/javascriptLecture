@@ -14,8 +14,16 @@ function makeIterable(initialValue, maxValue, callback) {
   };
 }
 
+
+
+
 const multiple = makeIterable(0, 20, (num) => num * 2);
-console.clear();
+
+// console.clear();
+console.log(multiple.iterator);
+
+
+
 for (const num of multiple) {
   console.log(num);
 }

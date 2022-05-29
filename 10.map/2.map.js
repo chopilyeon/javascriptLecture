@@ -11,7 +11,7 @@ console.log(map.size);
 console.log(map.has('key1'));
 console.log(map.has('key6'));
 
-// 순회
+// 순회 iterable도 사용할 수 있더라~! 
 map.forEach((value, key) => console.log(key, value));
 console.log(map.keys());
 console.log(map.values());
@@ -44,5 +44,5 @@ console.log(obj);
 const map2 = new Map([[key, milk]]);
 console.log(map2);
 console.log(obj[key]);
-console.log(map2[key]);
-console.log(map2.get(key));
+console.log(map2[key]); //undefined 나옴  
+console.log(map2.get(key)); //map은 get 이라는 함수를 사용해서 key값을 받아옴. 

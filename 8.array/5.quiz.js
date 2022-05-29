@@ -2,8 +2,10 @@
 // 단, 주어진 배열을 수정하지 않도록!
 // input: ['🍌', '🍓', '🍇', '🍓']
 // output: [ '🍌', '🥝', '🍇', '🥝' ]
+
+
 function replace(array, from, to) {
-  const replaced = Array.from(array);
+  const replaced = Array.from(array); //이러면 그냥 복사하는 것임. 
   for (let i = 0; i < replaced.length; i++) {
     if (replaced[i] === from) {
       replaced[i] = to;
@@ -21,7 +23,7 @@ console.log(result);
 // 배열안에 그 요소가 몇개나 있는지 카운트 하는 함수 만들기
 // input: [ '🍌', '🥝', '🍇', '🥝' ], '🥝'
 // output: 2
-function count(array, item) {
+function count(array, item) { 
   let counter = 0;
   for (let i = 0; i < array.length; i++) {
     if (array[i] === item) {

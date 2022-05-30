@@ -28,7 +28,7 @@ function fetchEgg(chicken) {
 
 
 function fryEgg(egg) {
-  return Promise.resolve(`${egg} => 🍳`);
+  return Promise.resolve(`${egg} => 🍳`); //promise를 return함 
 }
 
 function getChicken() {
@@ -44,8 +44,8 @@ function getChicken() {
 //길게 늘어쓰면 이런식인것
 
 // getChicken()
-//   .then((e) => fetchEgg(e))
-//   .then((e) => fryEgg(e))
+//   .then((e) => fetchEgg(e)) // 즉 promise return함 
+//   .then((e) => fryEgg(e)) 
 //   .then((e)=>console.log(e));
 
 
@@ -93,6 +93,7 @@ getChicken()
 .then(console.log)
 .catch((e) => '🐔')
 .then(e=>console.log(e)); // 무조건 닭으로 이라는 놈으로 만들어버려라. 
+
 
 
 

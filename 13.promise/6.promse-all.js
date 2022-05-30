@@ -18,14 +18,14 @@ function getOrange() {
   return Promise.reject(new Error('no orange')); // 오렌지는 바로 에러를 던짐. 
 }
 
-// 바나나과 사과를 같이 가지고 오기
+// 바나나과 사과를 같이 가지고 오기 (4초 걸림))
 getBanana() //
   .then((banana) => // 인자값이 같지 않으므로 생략은 못했음 대신 return값은 생략함
-    getApple() //
+    getApple() // apple 함수 부르자!~! 
       .then((apple) => [banana, apple]) // return이 생략 된 것임 promise가 return이 됨. 
   )
   .then(console.log); // 4초 있다가 출력이 됨.  순차적으로 진행하니까 매우 번거로움. 
-
+//.then((result)=>console.log(result));
 
   //원래 코드는 이랬는데 return을 생략했음. 
   //중첩된 코드는 콜백헬이 됨. 

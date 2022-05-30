@@ -13,7 +13,9 @@
       )
         .then((response) => {
           return response.json();
-        }) // ㅔ
+        }) // promise를 return 하는구나 -> json으로 변환하는데에 시간이 오래 걸리는구나
+        // promise를 이용해야 겠다. 이 promise까지 다 된다면 data를 긁어오겠다! 
+        //이제 object로 긁어옴을 알 수 있음. 
         .then((data) => console.log(data.dataseries));
     </script>
   </body>
